@@ -65,7 +65,7 @@ jobs:
 
     - name: Load custom feeds
       run: |
-        [ -e $Lean_files.feeds.conf.default ] && mv $Lean_files.feeds.conf.default openwrt/feeds.conf.default
+        [ -e Lean_files.feeds.conf.default ] && mv Lean_files.feeds.conf.default openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
@@ -79,7 +79,7 @@ jobs:
     - name: Load custom configuration
       run: |
         [ -e Lean_files ] && mv Lean_files openwrt/files
-        [ -e $Lean_files.config ] && mv $Lean_files.config openwrt/.config
+        [ -e Lean_files.config ] && mv Lean_files.config openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
