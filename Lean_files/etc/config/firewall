@@ -257,3 +257,44 @@ config redirect
 	option dest_port '3389'
 	option name 'win'
 
+config redirect
+	option target 'DNAT'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp udp'
+	option src_dport '2801'
+	option dest_ip '192.168.50.50'
+	option dest_port '2801'
+	option name 'cj1'
+
+config redirect
+	option target 'DNAT'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp udp'
+	option src_dport '2802'
+	option dest_ip '192.168.50.50'
+	option dest_port '2802'
+	option name 'cj2'
+
+config redirect
+	option target 'DNAT'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp udp'
+	option src_dport '3901'
+	option dest_ip '192.168.50.50'
+	option dest_port '3901'
+	option name 'cj3'
+
+config redirect
+	option enabled '1'
+	option target 'DNAT'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp udp'
+	option src_dport '3478'
+	option dest_ip '192.168.50.50'
+	option dest_port '3478'
+	option name 'cj4'
+
